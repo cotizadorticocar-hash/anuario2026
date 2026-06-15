@@ -84,7 +84,6 @@
         /* Simuladores de Imágenes (Placeholders) */
         .image-placeholder {
             background-color: #ddd;
-            border: 2px dashed #bbb;
             border-radius: 6px;
             display: flex;
             align-items: center;
@@ -130,7 +129,7 @@
         }
 
         .student-photo {
-            height: 180px; background-image: url('alum1.jpg');
+            height: 180px;
             margin-bottom: 0.8rem;
         }
 
@@ -153,9 +152,7 @@
 
         /* --- Estilos Fotos Casuales --- */
         .casual-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-            gap: 2rem;
+            text-align: center;
         }
 
         .casual-card {
@@ -252,32 +249,37 @@
                 <!-- Se simulan los 30 alumnos de forma compacta mediante código limpio -->
                 <!-- Alumno 1 -->
                 <div class="student-card">
-                    <div class="image-placeholder student-photo"></div>
+                    <div class="image-placeholder student-photo"><img src="alum1.jpg" width="160" height="180"></div>
                     <div class="student-name">Jorge Ramos</div>
                 </div>
                 <!-- Alumno 2 -->
                 <div class="student-card">
-                    <div class="image-placeholder student-photo"></div>
+                    <div class="image-placeholder student-photo"><img src="alum2.jpg" width="160" height="180"></div>
                     <div class="student-name">Adriana Tames</div>
                 </div>
                 <!-- Alumno 3 -->
                 <div class="student-card">
-                    <div class="image-placeholder student-photo"></div>
+                    <div class="image-placeholder student-photo"><img src="alum3.jpg" width="160" height="180"></div>
                     <div class="student-name">Kevin Vargas</div>
                 </div>
                 <!-- Alumno 4 -->
                 <div class="student-card">
-                    <div class="image-placeholder student-photo"></div>
-                    <div class="student-name">Alumno 4</div>
+                    <div class="image-placeholder student-photo"><img src="alum4.jpg" width="170" height="180"></div>
+                    <div class="student-name">Anastasia Brown</div>
                 </div>
                 <!-- Alumno 5 -->
                 <div class="student-card">
-                    <div class="image-placeholder student-photo"></div>
-                    <div class="student-name">Alumno 5</div>
+                    <div class="image-placeholder student-photo"><img src="alum5.jpg" width="170" height="180"></div>
+                    <div class="student-name">Esteban Blanco</div>
+                </div>
+                <!-- Alumno 6 -->
+                <div class="student-card">
+                    <div class="image-placeholder student-photo"><img src="alum6.jpg" width="170" height="180"></div>
+                    <div class="student-name">Beatriz Naranjo</div>
                 </div>
                 <!-- Repetición rápida para simular los 30 bloques de manera visual -->
                 <script>
-                    for (let i = 6; i <= 30; i++) {
+                    for (let i = 7; i <= 30; i++) {
                         document.write(`
                             <div class="student-card">
                                 <div class="image-placeholder student-photo"></div>
