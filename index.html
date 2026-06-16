@@ -224,7 +224,7 @@
         }
 
         /* --- Estilos Fotos Casuales --- */
-        .casual-grid {
+        .casual-grid-container {
             text-align: center;
         }
 
@@ -234,20 +234,7 @@
             margin-bottom: 1.5rem;
         }
 
-        .casual-info {
-            padding: 1rem;
-        }
 
-        .casual-tag {
-            display: inline-block;
-            background-color: #2a5298;
-            color: white;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
 
         /* Footer */
         footer {
@@ -545,10 +532,14 @@
         <!-- PÁGINA 4: FOTOS CASUALES (Sobresalientes) -->
         <section id="momentos-casuales">
             <h2>Las Princesas</h2>
-            <p style="margin-bottom: 1.5rem; color: #666;">No se trata de tener mil amigas, se trata de tener las que valen MIL.</p>
-            
+            <div class="casual-grid-container">
+            <p><em>No se trata de tener mil amigas, se trata de tener las que valen MIL.<em></p>
+            <br></br>
+                
             <div class="casual-grid">
                 <!-- Tarjeta Casual 1: Deportes -->
-                <div class="casual-card">
                     <div class="image-placeholder casual-photo"></div>
-                    <div class="casual-info">
+            </div>
+        </section>
+</body>
+</html>
