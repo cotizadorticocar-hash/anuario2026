@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institución Educativa - Graduandos</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            max-width: 800px;
+            width: 100%;
+            display: flex;
+            overflow: hidden; /* Mantiene las esquinas redondeadas en la foto */
+        }
+
+
+        /* Contenedor de la foto principal (Izquierda) */
+        .photo-side {
+            flex: 1;
+            min-width: 45%;
+            background-color: #e2e8f0;
+        }
+
+        .photo-side img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Contenedor de la información (Derecha) */
+        .info-side {
+            flex: 1.2;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .colegio-header {
+            color: #1a365d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .student-name {
+            color: #2d3748;
+            font-size: 2rem;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        .student-grade {
+            color: #3182ce;
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .description {
+            color: #4a5568;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .btn-container {
+            margin-top: auto; /* Empuja el botón al fondo si hay espacio */
+        }
+
+        .btn-link {
+            display: inline-block;
+            background-color: #1a365d;
+            color: white;
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+            text-align: center;
+        }
+
+        .btn-link:hover {
+            background-color: #2b6cb0;
+        }
+
+        .btn-link:active {
+            transform: scale(0.98);
+        }
+
+        /* Diseño responsivo para pantallas pequeñas (Celulares) */
+        @media (max-width: 650px) {
+            .container {
+                flex-direction: column;
+            }
+            .photo-side {
+                height: 300px;
+            }
+            .info-side {
+                padding: 30px 20px;
+            }
+            .btn-link {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+     <div class="container">
+        <!-- Foto Principal (Lado Izquierdo) -->
+        <div class="photo-side">
+            <!-- Reemplaza esta URL por la foto rectangular o vertical del estudiante -->
+            <img src="alum1.jpg" alt="Foto principal del estudiante">
+        </div>
+        
+        <!-- Información y Descripción (Lado Derecho) -->
+        <div class="info-side">
+            <div class="colegio-header">Técnico Profesional Don Bosco</div>
+            
+            <h2 class="student-name">Jorge Ramos</h2>
+            <div class="student-grade">Especialdad - Desarrollo Web</div>
+            
+            <p class="description">
+                Jorge es un estudiante destacado en el área de ciencias y robótica. Le apasiona la programación, forma parte del equipo de fútbol de la institución y actualmente lidera el proyecto escolar de reciclaje tecnológico. Su meta este año es clasificar a la olimpiada nacional.
+            </p>
+            
+            <!-- Botón de Enlace -->
+            <div class="btn-container">
+                <a href="index.html#grupo-completo" class="btn-link">Regresar →</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

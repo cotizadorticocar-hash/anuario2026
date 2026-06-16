@@ -111,6 +111,62 @@
             margin-bottom: 1rem;
             font-size: 1.1rem;
         }
+        
+        
+        /* Cuadrícula de Especialidad (Responsive) */
+        .especialidad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Enlace contenedor de la tarjeta */
+        .especialidad-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        /* Tarjeta de Especialidad */
+        .especialidad-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .especialidad-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .esp-photo-container {
+            width= 140px;
+            height: 190px;
+            background-color: #e2e8f0;
+        }
+
+        .esp-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .especialidad-name {
+            padding: 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2d3748;
+            transition: color 0.2s;
+        }
+
+        .especialidad-card:hover .student-name {
+            color: #3182ce;
+        }
 
         /* --- Estilos Grupo Completo (30 Alumnos) --- */
         .students-grid {
@@ -119,6 +175,13 @@
             gap: 1.5rem;
         }
 
+        /* Enlace contenedor de la tarjeta */
+        .student-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
         .student-card {
             background: #fff;
             border: 1px solid #e0e0e0;
@@ -128,6 +191,12 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
 
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        
         .student-photo {
             width= 140px;
             height: 190px;
@@ -140,6 +209,9 @@
             color: #222;
         }
 
+        .student-card:hover .student-name {
+            color: #3182ce;
+        }
         /* --- Estilos Foto de Grupo --- */
         .group-photo-container {
             text-align: center;
@@ -156,18 +228,10 @@
             text-align: center;
         }
 
-        .casual-card {
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        }
-
         .casual-photo {
             width: 100%;
             height: 500px;background-image: url('grupo2.jpg');
-            border-radius: 0;
-            border: none;
+            margin-bottom: 1.5rem;
         }
 
         .casual-info {
@@ -214,12 +278,13 @@
     <!-- Encabezado del Anuario -->
     <header>
         <h1>Anuario 2026</h1>
-        <p>Generación de Graduandos • Colegio Nacional Científico</p>
+        <p>Generación de Graduandos • Técnico Profesional Don Bosco</p>
     </header>
 
     <!-- Menú de Navegación entre páginas -->
     <nav>
         <a href="#inicio">Inicio</a>
+        <a href="#especialidad">Especialidades</a>
         <a href="#grupo-completo">Graduandos (28)</a>
         <a href="#foto-grupal">Los Guapos</a>
         <a href="#momentos-casuales">Las Princesas</a>
@@ -235,34 +300,110 @@
                    
                 </div>
                 <div class="review-text">
-                    <p>Fundado con la misión de formar líderes íntegros, el <strong>Colegio Nacional</strong> ha sido nuestro segundo hogar durante los últimos años. En sus aulas no solo adquirimos conocimientos académicos, sino que también forjamos amistades que durarán toda la vida.</p>
-                    <p>Esta sección rinde homenaje a la infraestructura, los profesores y la mística institucional que nos acompañó paso a paso en este camino hacia la graduación. ¡Gracias por recibirnos como niños y despedirnos como ciudadanos listos para cambiar el mundo!</p>
+                    <p><strong>El Colegio Técnico Profesional Don Bosco</strong>, como parte del complejo educativo de <strong>CEDES Don Bosco</strong> ofrece una educación integral e innovadora. Nuestro modelo pedagógico se basa en el crecimiento integral de los estudiantes como personas- profesionales y gestores de cambio positivo en la sociedad.</p>
+
+                    <p>Nuestra formación se caracteriza en el desarrollo de habilidades blandas durante el aprendizaje de competencias técnicas que complementen la educación cristiana y en valores que nos identifica.</p>
+                    
+                    <p>Con la meta de formar Buenos cristianos y Honrados ciudadanos, nuestra labor educativa se enmarca en el Sistema Preventivo que Don Bosco impulsó en sus obras. Por ello la Razón, la Religión y el Amor son los pilares de una formación integral que, aunada a una oferta académica de calidad, fomenta en el joven la responsabilidad de su educación y le proporciona los medios para ser el protagonista, con la guía de sus docentes.</p>
                 </div>
             </div>
+        </section>
+        
+                <!-- PÁGINA 2: ESPECIALIDADES (Las 6 especialidades) -->
+        <section id="especialidad">
+            <h2>ESPECIALIDADES</h2>
+            <div class="especialidad-grid">
+        
+        <!-- Mecánica de Presicón 1 -->
+        <a href="index.html#grupo-completo" class="especialidad-link">
+            <div class="especialidad-card">
+                <div class="esp-photo-container">
+                    <img src="espe1.jpg" alt="Mecánida de Presición">
+                </div>
+                <div class="especialidad-name">Mecánica de Precisión</div>
+            </div>
+        </a>
+
+        <!-- Diseño Gráfico Multimedia 2 -->
+        <a href="index.html#grupo-completo" class="especialidad-link">
+            <div class="especialidad-card">
+                <div class="esp-photo-container">
+                    <img src="espe2.jpg" alt="Diseño Gráfico Multimedia">
+                </div>
+                <div class="especialidad-name">Diseño Gráfico Multimedia</div>
+            </div>
+        </a>
+
+        <!-- Electromecánica 3 -->
+        <a href="index.html#grupo-completo" class="especialidad-link">
+            <div class="especialidad-card">
+                <div class="esp-photo-container">
+                    <img src="espe3.jpg" alt="Electromecánica">
+                </div>
+                <div class="especialidad-name">Electromecánica</div>
+            </div>
+        </a>
+
+        <!-- Dibujo y Modelado para Edificaciones 4 -->
+        <a href="index.html#grupo-completo" class="especialidad-link">
+            <div class="especialidad-card">
+                <div class="esp-photo-container">
+                    <img src="espe4.jpg" alt="Dibujo y Modelado para Edificaciones">
+                </div>
+                <div class="especialidad-name">Dibujo y Modelado para Edificaciones</div>
+            </div>
+        </a>
+
+        <!-- Desarrollo Web 5 -->
+        <a href="index.html#grupo-completo" class="especialidad-link">
+            <div class="especialidad-card">
+                <div class="esp-photo-container">
+                    <img src="espe5.jpg" alt="Desarrollo Web">
+                </div>
+                <div class="especialidad-name">Desarrollo Web</div>
+            </div>
+        </a>
+
+        <!-- Ciberseguridad 6 -->
+        <a href="index.html#grupo-completo" class="especialidad-link">
+            <div class="especialidad-card">
+                <div class="esp-photo-container">
+                    <img src="espe6.jpg" alt="Ciberseguridad">
+                </div>
+                <div class="especialidad-name">Ciberseguridad</div>
+            </div>
+        </a>
+                
+        </div>
         </section>
 
         <!-- PÁGINA 2: GRUPO COMPLETO (30 Alumnos con Toga y Birrete) -->
         <section id="grupo-completo">
-            <h2>SECCIÓN 5-2</h2>
+            <h2>ESPECIALIDAD : Desarrollo Web</h2>
             <p style="margin-bottom: 1.5rem; color: #666;">Cada obstáculo que superaste te hizo más fuerte. Hoy ese título es la recompensa pero la verdadera victoria eres tú.</p>
             
             <div class="students-grid">
                 <!-- Se simulan los 30 alumnos de forma compacta mediante código limpio -->
                 <!-- Alumno 1 -->
+                <a href="alum1.html" class="student-link">
                 <div class="student-card">
                     <div class="image-placeholder student-photo"><img src="alum1.jpg" width="140" height="190"></div>
                     <div class="student-name">Jorge Ramos</div>
                 </div>
+                </a>
                 <!-- Alumno 2 -->
+                <a href="alum2.html" class="student-link">
                 <div class="student-card">
                     <div class="image-placeholder student-photo"><img src="alum2.jpg" width="140" height="190"></div>
                     <div class="student-name">Adriana Tames</div>
                 </div>
+                </a>
                 <!-- Alumno 3 -->
                 <div class="student-card">
                     <div class="image-placeholder student-photo"><img src="alum3.jpg" width="140" height="190"></div>
                     <div class="student-name">Kevin Vargas</div>
                 </div>
+                
                 <!-- Alumno 4 -->
                 <div class="student-card">
                     <div class="image-placeholder student-photo"><img src="alum4.jpg" width="140" height="190"></div>
