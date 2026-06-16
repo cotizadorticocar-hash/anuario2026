@@ -235,6 +235,96 @@
         }
 
 
+        /* Estilos Collage */
+                    :root {
+            --bg-color: #f4f6f9;
+            --text-red: #d13d4b;
+            --bg-red: #e62325;
+            --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        
+            /* Contenedor Grid Principal */
+        .collage-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(150px, auto);
+            gap: 15px;
+            max-width: 1000px;
+            width: 100%;
+        
+        .card {
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Configuración de posiciones en el Grid */
+        .item-basket-top {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .item-texto-principal {
+            grid-column: 1;
+            grid-row: 2 / 4;
+            padding: 40px 30px;
+            justify-content: center;
+        }
+
+        .item-danza {
+            grid-column: 2;
+            grid-row: 1 / 3;
+        }
+
+        .item-clase-bottom {
+            grid-column: 2;
+            grid-row: 3 / 5;
+        }
+
+        .item-rojo-texto {
+            grid-column: 3;
+            grid-row: 1;
+            background-color: var(--bg-red);
+            color: #fff;
+            padding: 30px;
+            justify-content: center;
+        }
+
+        .item-grupo {
+            grid-column: 3;
+            grid-row: 2 / 5;
+        }
+
+        /* Estilos de Contenido y Tipografía */
+        .item-texto-principal h1 {
+            color: var(--text-red);
+            font-size: 2.2rem;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .item-texto-principal p {
+            color: #444;
+            line-height: 1.6;
+            font-size: 1.05rem;
+            margin: 0;
+        }
+
+        .item-rojo-texto p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            margin: 0;
+        }
 
         /* Footer */
         footer {
@@ -540,6 +630,49 @@
                 <!-- Tarjeta Casual 1: Deportes -->
                     <div class="image-placeholder casual-photo"></div>
             </div>
+        </section>
+            
+        <!-- PÁGINA 5: COLLAGE -->    
+        <section id="collage">
+            
+        <div class="collage-container">
+        
+        <!-- Bloque 1: Basket -->
+        <div class="card item-basket-top">
+            <img src="colla1-1.jpg" alt="Basket">
+        </div>
+
+        <!-- Bloque 2: Siempre Unidos -->
+        <div class="card item-texto-principal">
+            <h1>Siempre Unidos</h1>
+            <p>"Mi mayor privilegio es contar con personas que me impulsan, me acompañan en las buenas y me sostienen en las malas."<br><br>
+            "Gracias compañeros por regalarme tantas risas, por escucharme sin juzgar y por hacer cada día más especial." <br><br>"Dicen que la familia no solo es de sangre, y ustedes son la prueba de ello. Los elijo hoy y siempre."<br><br>"Gracias por ser ese lugar seguro al que siempre puedo volver. Con ustedes, la vida es mucho más bonita."</p>
+        </div>
+
+        <!-- Bloque 3: Danza -->
+        <div class="card item-danza">
+            <img src="colla1-2.jpg" alt="Danza">
+        </div>
+
+        <!-- Bloque 4: Clase -->
+        <div class="card item-clase-bottom">
+            <img src="colla1-3.jpg" alt="Clase">
+        </div>
+
+        <!-- Bloque 5: Tarjeta Roja Siempre Amigos -->
+        <div class="card item-rojo-texto">
+            <h1>Siempre Amigos</h1>
+            <p>"Una buena amistad es como el WiFi: se conecta automáticamente cuando estamos juntos."</p>
+        </div>
+
+        <!-- Bloque 6: Grupo -->
+        <div class="card item-grupo">
+            <img src="colla1-4.jpg" alt="Grupo">
+        </div>
+
+    </div>
+            
+            
         </section>
 </body>
 </html>
